@@ -1,0 +1,218 @@
+\documentclass[dvipdfm]{beamer}
+\AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+\usepackage{atbegshi} % しおりの和文対応
+\usepackage{minijs}
+
+\renewcommand{\kanjifamilydefault}{\gtdefault} % 本文ゴシック体
+
+%%%%%%%%%%%  theme  %%%%%%%%%%%
+%\usetheme{Madrid}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Barkeley}
+%\usetheme{Bergen}
+\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{default}
+%\usetheme{Dreson}
+%\usetheme{Frankurt}
+%\usetheme{Goettingen}
+%\usetheme{Hanover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+
+%%%%%%%%%%%  inner theme  %%%%%%%%%%%
+%\useinnertheme{default}
+\useinnertheme{circles}
+%\useinnertheme{inmargin}
+%\useinnertheme{rectangles}
+%\useinnertheme{rounded}
+
+
+%%%%%%%%%%%  outer theme  %%%%%%%%%%%
+%\useoutertheme{default}
+%\useoutertheme{miniframes}
+%\useoutertheme{infolines}
+%\useoutertheme{miniframes}
+\useoutertheme{smoothbars}
+%\useoutertheme{sidebars}
+%\useoutertheme{split}
+%\useoutertheme{shadow}
+%\useoutertheme{tree}
+%\useoutertheme{smoothtree}
+
+
+%%%%%%%%%%%  color theme  %%%%%%%%%%%
+%\usecolortheme{structure}
+%\usecolortheme{sidebartab}
+%\usecolortheme{albatross}
+%\usecolortheme{beetle}
+%\usecolortheme{dove}
+%\usecolortheme{crane}
+%\usecolortheme{fly}
+%\usecolortheme{seagull}
+%\usecolortheme{wolverine}
+%\usecolortheme{beaver}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{whale}
+%\usecolortheme{seahorse}
+%\usecolortheme{dolphin}
+
+
+%%%%%%%%%%%  font theme  %%%%%%%%%%%
+\usefonttheme{professionalfonts}
+%\usefonttheme{default}
+%\usefonttheme{serif}
+%\usefonttheme{structurebold}
+%\usefonttheme{structureserif}
+%\usefonttheme{structuresmallcapsserif}
+
+
+%%%%%%%%%%%  degree of transparency  %%%%%%%%%%%
+%\setbeamercovered{transparent=30}
+
+
+%%%%%%%%%%%  numbering  %%%%%%%%%%%
+%\setbeamertemplate{numbered}
+
+%\setbeamertemplate{navigation symbols}{}
+
+\AtBeginSection[]
+{\begin{frame}{発表の流れ}\tableofcontents[currentsection]\end{frame}}
+
+
+\title[題目(下部)]{題目}
+\author[氏名(下部)]{氏名}
+\institute[所属(下部)]{所属}
+\date{June 25th}
+%\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{あんなこんな}
+%%%%%%%%%%%% シート(1枚目) %%%%%%%%%%%%
+\subsection{タイトル}
+\begin{frame}[t]
+ \frametitle{タイトル}
+
+\[
+  \int \sqrt{x^2+A}\, dx
+  =\dfrac{1}{2}\left(x\sqrt{x^2+A}+A\log\big|x+\sqrt{x^2+A}\big|\right)
+\]
+
+ \begin{enumerate}
+   \item 1
+   \item 2
+ \end{enumerate}
+
+\end{frame}
+%%%%%%%%%%%% シート(1枚目) %%%%%%%%%%%%
+
+
+%%%%%%%%%%%% シート(2枚目) %%%%%%%%%%%%
+\subsection{ブロック}
+\begin{frame}[c]
+ \frametitle{ブロック}
+ \begin{block}{基本ブロック}
+  基本的なブロックです．
+ \end{block}
+\end{frame}
+%%%%%%%%%%%% シート(2枚目) %%%%%%%%%%%%
+
+\section{次のセクション}
+%%%%%%%%%%%% シート(3枚目) %%%%%%%%%%%%
+\subsection{オーバーレイ}
+\begin{frame}
+ \frametitle{オーバーレイ(数字)}
+ \begin{itemize}
+   \item<1-> 1枚目
+   \item<2-3> 2枚目
+   \item<3> 3枚目
+   \item<4> 4枚目
+ \end{itemize}
+\end{frame}
+%%%%%%%%%%%% シート(3枚目) %%%%%%%%%%%%
+
+
+%%%%%%%%%%%% シート(4枚目) %%%%%%%%%%%%
+\subsection{色付け}
+\begin{frame}[t, fragile]
+ \frametitle{色付け}
+  {\color{red} red}(\alert{alert}),
+  {\color{blue} blue}(\structure{structure}),
+  {\color{green} green},
+  {\color{cyan} cyan},
+  {\color{magenta} magenta},
+  {\color{yellow} yellow},
+  {\color{black} black},
+  {\color{darkgray} darkgray},
+  {\color{gray} gray},
+  {\color{lightgray} lightgray},
+  {\color{orange} orange},
+  {\color{violet} violet},
+  {\color{purple} purple},
+  {\color{brown} brown},
+
+\end{frame}
+%%%%%%%%%%%% シート(4枚目) %%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%% シート(5枚目) %%%%%%%%%%%%
+\begin{frame}[t]
+ \frametitle{特殊効果}
+  \transboxin<1>
+  \transboxout<2>
+   \begin{enumerate}
+  \item<1> 
+   {\huge transboxin
+   \[\int_{0}^{1}\tan x\, dx=\dfrac{\pi}{4}\]
+   }
+  \item<2>
+   {\huge transboxout
+   \[\int_{0}^{1}\tan x\, dx=\dfrac{\pi}{4}\]
+   }
+   \end{enumerate}
+\end{frame}
+%%%%%%%%%%%% シート(5枚目) %%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%% シート(6枚目) %%%%%%%%%%%%
+\begin{frame}[t]
+ \frametitle{コラム}
+  \begin{columns}[t]
+   \begin{column}{.3\textwidth}
+    左側に説明などなど
+   \end{column}
+   \begin{column}{.4\textwidth}
+    \begin{alertblock}{ブロック}
+     ブロックなども当然入れられます．
+    \end{alertblock}
+   \end{column}
+  \end{columns}
+\end{frame}
+%%%%%%%%%%%% シート(6枚目) %%%%%%%%%%%%
+
+
+\end{document}

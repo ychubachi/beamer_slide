@@ -1,0 +1,16 @@
+\frametitle{色付け}
+  {\color{red} red}(\alert{alert}),
+  {\color{blue} blue}(\structure{structure}),
+  {\color{green} green},
+  {\color{cyan} cyan},
+  {\color{magenta} magenta},
+  {\color{yellow} yellow},
+  {\color{black} black},
+  {\color{darkgray} darkgray},
+  {\color{gray} gray},
+  {\color{lightgray} lightgray},
+  {\color{orange} orange},
+  {\color{violet} violet},
+  {\color{purple} purple},
+  {\color{brown} brown},
+
